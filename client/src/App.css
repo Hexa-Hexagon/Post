@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-image: linear-gradient(to bottom, purple, cornflowerblue, plum);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: plum;
+    border-radius: 50px;
+}

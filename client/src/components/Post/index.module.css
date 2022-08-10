@@ -1,0 +1,76 @@
+.post {
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    margin-top: 50px;
+    margin-left: 40px;
+    perspective: 1000px;
+}
+
+.post:hover .postInner {
+    transform: rotateX(-180deg);
+}
+
+.postInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+}
+
+.postFront,
+.postBack {
+    border: solid 4.5px white;
+    border-radius: 150px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.postFront {
+    background-image: linear-gradient(to bottom, hotpink, plum, crimson);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postBack {
+    background-image: linear-gradient(to top, hotpink, plum, crimson);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: rotateX(180deg);
+}
+
+.inpPostContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+}
+
+.inpPost {
+    width: 100px;
+    height: 25px;
+    border: 5px double cornflowerblue;
+    border-radius: 5px;
+}
+
+.btnPostContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 200px
+}
+
+.btnPost {
+    border: none;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    color: white;
+    width: 70px;
+    height: 45px;
+    font-size: 20px;
+}

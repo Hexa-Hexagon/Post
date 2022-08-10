@@ -1,5 +1,6 @@
 import React , {useState} from 'react';
 import Post from '../Post';
+import classes from './index.module.css'
 const PostList = () => {
     let [posts , setPosts] = useState([]);
     let [count , setCount] = useState(1);
@@ -20,16 +21,16 @@ const PostList = () => {
         setPosts(posts.filter(p=>p.id!==post.id));
     }
     return (
-    <>
-        <header>
-            <button onClick={AddPost}>crateNew</button>
+    <div className={classes.postListContainer}>
+        <header className={classes.headCreate}>
+            <button className={classes.btnCreate} onClick={AddPost}>Crate new post</button>
         </header>
-        <div >
+        <div className={classes.postList} >
             {posts.map(post=>
             <Post removePost={removePost} post = {post} key={post.id} />
             )}
         </div>
-    </>
+    </div>
     );
 };
 
